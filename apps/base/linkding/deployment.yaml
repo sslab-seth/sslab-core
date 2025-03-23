@@ -19,6 +19,17 @@ spec:
       containers:
         - name: linkding
           image: sissbruecker/linkding:1.31.0
+          env:
+            - name: LD_SUPERUSER_NAME
+              valueFrom:
+                secretKeyRef:
+                  name: linkding-admin-secret
+                  key: user
+            - name: LD_SUPERUSER_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: linkding-admin-secret
+                  key: password
           volumeMounts:
             - name: linkding-data
               mountPath: /etc/linkding/data
