@@ -31,4 +31,9 @@ spec:
   values:
     grafana:
       adminPassword: seth
+    ingress:
+      enabled: true
+      ingressClassName: traefik
+      hosts:
+        - grafana.sslaboratory.cloud
 
