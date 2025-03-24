@@ -6,3 +6,4 @@ resources:
     #- cloudflare.yaml
   - cloudflare-secret.yaml
   - linkding-admin-secret.yaml
+  - ingress.yaml
