@@ -41,4 +41,4 @@ spec:
         tls:
           - secretName: grafana-tls-secret
             hosts:
-            -grafana.sslaboratory.cloud
+              - grafana.sslaboratory.cloud
