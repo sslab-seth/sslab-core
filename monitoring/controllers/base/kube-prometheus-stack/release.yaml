@@ -31,13 +31,13 @@ spec:
   values:
     grafana:
       adminPassword: seth
-    ingress:
-      enabled: true
-      ingressClassName: traefik
-      hosts:
-        - grafana.sslaboratory.cloud
-      pathType: ImplementationSpecific
-        #tls:
-          #- secretName: grafana-tls-secret
-          #hosts:
-          #  -grafana.sslaboratory.cloud
+      ingress:
+        enabled: true
+        ingressClassName: traefik
+        hosts:
+          - grafana.sslaboratory.cloud
+        pathType: ImplementationSpecific
+        tls:
+          - secretName: grafana-tls-secret
+            hosts:
+              -grafana.sslaboratory.cloud
