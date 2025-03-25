@@ -36,7 +36,8 @@ spec:
       ingressClassName: traefik
       hosts:
         - grafana.sslaboratory.cloud
-          #tls:
+      pathType: ImplementationSpecific
+        #tls:
           #- secretName: grafana-tls-secret
           #hosts:
           #  -grafana.sslaboratory.cloud
