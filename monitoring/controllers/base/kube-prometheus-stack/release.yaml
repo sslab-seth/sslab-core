@@ -34,8 +34,10 @@ spec:
       ingress:
         enabled: true
         ingressClassName: traefik
+        
         hosts:
           - grafana.sslaboratory.cloud
+        
         tls:
           - secretName: grafana-tls-secret
             hosts:
