@@ -16,7 +16,7 @@ spec:
       - image: advplyr/audiobookshelf:2.20.0
         name: audiobookshelf
         ports:
-        - containerPort: 13378
+        - containerPort: 80
         envFrom:
           - configMapRef:
               name: audiobookshelf-configmap
