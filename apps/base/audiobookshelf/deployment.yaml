@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: audiobookshelf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: audiobookshelf
+  template:
+    metadata:
+      labels:
+        app: audiobookshelf
+    spec:
+      containers:
+      - image:advplyr/audiobookshelf:2.20.0
+        name: audiobookshelf
+        ports:
+        - containerPort: 3005
+        envFrom:
+          - configMapRef:
+              name: audiobookshelf-configmap
