@@ -12,11 +12,17 @@ spec:
       labels:
         app: audiobookshelf
     spec:
+      securityContext:
+        fsGroup: 1000
+        runAsUser: 1000
+        runAsGroup: 1000
       containers:
       - image: advplyr/audiobookshelf:2.20.0
         name: audiobookshelf
         ports:
         - containerPort: 80
+        securityContext:
+          allowPrivilegeEscalation: false
         volumeMounts:
           - name: abs-audiobooks
             mountPath: /audiobooks
