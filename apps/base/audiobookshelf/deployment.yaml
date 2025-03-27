@@ -32,13 +32,13 @@ spec:
       volumes:
         - name: abs-audiobooks
           persistentVolumeClaim:
-            claimName: abs-data-pvc
+            claimName: abs-audiobooks-pvc
         - name: abs-podcasts
           persistentVolumeClaim:
-            claimName: abs-data-pvc
+            claimName: abs-podcasts-pvc
         - name: abs-config
           persistentVolumeClaim:
-            claimName: abs-data-pvc
+            claimName: abs-config-pvc
         - name: abs-metadata
           persistentVolumeClaim:
-            claimName: abs-data-pvc
+            claimName: abs-metadata-pvc
