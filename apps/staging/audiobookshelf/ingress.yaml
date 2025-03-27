@@ -12,6 +12,6 @@ spec:
           service:
             name: audiobookshelf
             port:
-              number: 80
+              number: 3005
         path: /
         pathType: Prefix
