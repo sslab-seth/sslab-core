@@ -16,7 +16,7 @@ spec:
       - image: advplyr/audiobookshelf:2.20.0
         name: audiobookshelf
         ports:
-        - containerPort: 80
+        - containerPort: 3005
         volumeMounts:
           - name: abs-audiobooks
             mountPath: /audiobooks
@@ -42,3 +42,4 @@ spec:
         - name: abs-metadata
           persistentVolumeClaim:
             claimName: abs-metadata-pvc
+      restartPolicy: Always
